@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:prj_wisatacandi51/data/candi_data.dart';
+import 'package:prj_wisatacandi51/widgets/detail_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,17 +15,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'wisata candi',
       theme: ThemeData(),
-      home: const DetailScreen(),
+      home: DetailScreen(
+        candi: candiList[0],
+      ),
     );
-  }
-}
-
-class DetailScreen extends StatelessWidget {
-  const DetailScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
   }
 }
